@@ -1,0 +1,13 @@
+Value TLOC_IP (\d+\.\d+\.\d+\.\d+)
+Value Colour (\S+)
+Value Encap (\w+)
+Value From (\d+\.\d+\.\d+\.\d+)
+Value Status (\S+)
+Value Key (\d+)
+Value Public (\d+\.\d+\.\d+\.\d+)
+Value Private (\d+\.\d+\.\d+\.\d+)
+Value BFD (\w+)
+
+Start
+ ^(ipv4\s+|\s+)${TLOC_IP}\s+${Colour}\s+${Encap}\s+${From}\s+${Status}\s+${Key}\s+${Public}\s+\d+\s+${Private}\s+\d+\s+::\s+\d+\s+::\s+\d+\s+${BFD} -> Record
+ 

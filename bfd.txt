@@ -1,0 +1,15 @@
+Value System_IP (\d+\.\d+\.\d+\.\d+)
+Value Site_ID (\d+)
+Value State (\w+)
+Value Source_TLOC (\S+)
+Value Remote_TLOC (\S+)
+Value Source_IP (\d+\.\d+\.\d+\.\d+)
+Value DST_IP (\d+\.\d+\.\d+\.\d+)
+Value Encap (\w+)
+Value Multiplier (\d+)
+Value Uptime (\d+:\d+:\d+:\d+)
+Value Transitions (\d+)
+
+Start
+ ^${System_IP}\s+${Site_ID}\s+${State}\s+${Source_TLOC}\s+${Remote_TLOC}\s+${Source_IP}\s+${DST_IP}\s+\d+\s+${Encap}\s+${Multiplier}\s+\d+\s+${Uptime}\s+${Transitions} -> Record
+
